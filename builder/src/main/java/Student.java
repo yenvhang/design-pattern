@@ -11,13 +11,13 @@ public class Student {
     //required field
     private String name;
 
-
     //optional
     private int sex;
     private String school;
     private int age;
     private String profession;
-    public Student(Builder builder){
+
+    private Student(Builder builder){
         this.name =builder.name;
         this.sex=builder.sex;
         this.school=builder.school;
@@ -25,18 +25,27 @@ public class Student {
         this.profession=builder.profession;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", sex=" + sex +
-                ", school='" + school + '\'' +
-                ", age=" + age +
-                ", profession='" + profession + '\'' +
-                '}';
+    public String getName() {
+        return name;
     }
 
-    static class Builder{
+    public int getSex() {
+        return sex;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public static class Builder{
         //required field
         private String name;
 
@@ -47,10 +56,8 @@ public class Student {
         private int sex;
 
         public Builder(String name) {
-
             this.name = name;
         }
-
 
         public Builder age(int age){
             this.age=age;
@@ -61,7 +68,7 @@ public class Student {
             return this;
         }
         public Builder profession(String profession){
-            this.profession=profession;
+            this.profession=  profession;
             return this;
         }
         private Builder sex(int sex){
