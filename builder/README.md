@@ -1,11 +1,10 @@
-
-##Builder Pattern
+## Builder Pattern
   优点:
   > 1. 链式调用写起来很舒服的哇
   > 2. 避免构造方法太多，或者构造参数太多导致调用构造方法时传入错误的参数。
   > 3. 可以对参数强加约束。 如下 Student 的 name属性不能为空。
   > 4. 不使用new对象后再调setter方法，避免了对象被创建好了但成员属性未完全设置好导致的状态不一致。
-##example
+## example
 ```java
 public class Student {
     //required field
@@ -91,7 +90,7 @@ public class Student {
     }
 }
 ```
-##插件推荐
+## 插件推荐
 自动生成Builder的插件
 
 <https://plugins.jetbrains.com/plugin/7354-innerbuilder>
